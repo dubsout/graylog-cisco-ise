@@ -1,0 +1,990 @@
+{
+  "extractors": [
+    {
+      "title": "Source",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 62,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "source",
+      "extractor_config": {
+        "regex_value": "(US(SFO|SC|DEN)\\dSV-\\d\\dISE)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "RequestLatency",
+      "extractor_type": "regex",
+      "converters": [
+        {
+          "type": "numeric",
+          "config": {}
+        }
+      ],
+      "order": 69,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "RequestLatency",
+      "extractor_config": {
+        "regex_value": "RequestLatency=(\\d*),"
+      },
+      "condition_type": "string",
+      "condition_value": "RequestLatency"
+    },
+    {
+      "title": "Device IP Address",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 56,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "DeviceIPAddress",
+      "extractor_config": {
+        "regex_value": "Device IP Address=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "DestinationIPAddress",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 41,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "DestinationIPAddress",
+      "extractor_config": {
+        "regex_value": "DestinationIPAddress=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "DestinationPort",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 58,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "DestinationPort",
+      "extractor_config": {
+        "regex_value": "DestinationPort=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "UserName",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 63,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "UserName",
+      "extractor_config": {
+        "regex_value": "UserName=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Protocol",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 68,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "Protocol",
+      "extractor_config": {
+        "regex_value": "Protocol=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "RequestLatency",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 67,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "RequestLatency",
+      "extractor_config": {
+        "regex_value": "RequestLatency=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "NetworkDeviceName",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 44,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "NetworkDeviceName",
+      "extractor_config": {
+        "regex_value": "NetworkDeviceName=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "NAS-IP-Address",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 61,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "NASIPAddress",
+      "extractor_config": {
+        "regex_value": "NAS-IP-Address=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "ConfigVersionId",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 49,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "ConfigVersionId",
+      "extractor_config": {
+        "regex_value": "ConfigVersionId=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "NAS-Port",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 60,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "NASPort",
+      "extractor_config": {
+        "regex_value": "NAS-Port=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Service-Type",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 64,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "ServiceType",
+      "extractor_config": {
+        "regex_value": "Service-Type=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Framed-MTU",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 51,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "FramedMTU",
+      "extractor_config": {
+        "regex_value": "Framed-MTU=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "CPMSessionID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 50,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "CPMSessionID",
+      "extractor_config": {
+        "regex_value": "State=37CPMSessionID=([^;]+);"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "SessionID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 59,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "SessionID",
+      "extractor_config": {
+        "regex_value": "41SessionID=([^;]+);"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Called-Station-ID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 53,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "CalledStationID",
+      "extractor_config": {
+        "regex_value": "Called-Station-ID=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Calling-Station-ID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 52,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "CallingStationID",
+      "extractor_config": {
+        "regex_value": "Calling-Station-ID=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "NAS-Identifier",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 57,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "NASIdentifier",
+      "extractor_config": {
+        "regex_value": "NAS-Identifier=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Acct-Session-Id",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 46,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "AcctSessionId",
+      "extractor_config": {
+        "regex_value": "Acct-Session-Id=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "NAS-Port-Type",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 48,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "NASPortType",
+      "extractor_config": {
+        "regex_value": "NAS-Port-Type=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Tunnel-Type",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 65,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "TunnelType",
+      "extractor_config": {
+        "regex_value": "Tunnel-Type=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Tunnel-Medium-Type",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 55,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "TunnelMediumType",
+      "extractor_config": {
+        "regex_value": "Tunnel-Medium-Type=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Tunnel-Private-Group-ID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 54,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "TunnelPrivateGroupID",
+      "extractor_config": {
+        "regex_value": "Tunnel-Private-Group-ID=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "audit-session-id",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 45,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "auditsessionid",
+      "extractor_config": {
+        "regex_value": "cisco-av-pair=audit-session-id=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Airespace-Wlan-Id",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 47,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "AirespaceWlanId",
+      "extractor_config": {
+        "regex_value": "Airespace-Wlan-Id=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "NetworkDeviceProfileName",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 26,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "NetworkDeviceProfileName",
+      "extractor_config": {
+        "regex_value": "NetworkDeviceProfileName=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "NetworkDeviceProfileId",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 27,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "NetworkDeviceProfileId",
+      "extractor_config": {
+        "regex_value": "NetworkDeviceProfileId=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "IsThirdPartyDeviceFlow",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 28,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "IsThirdPartyDeviceFlow",
+      "extractor_config": {
+        "regex_value": "IsThirdPartyDeviceFlow=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "RadiusFlowType",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 29,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "RadiusFlowType",
+      "extractor_config": {
+        "regex_value": "RadiusFlowType=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "SSID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 30,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "SSID",
+      "extractor_config": {
+        "regex_value": "SSID=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "AcsSessionID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 31,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "AcsSessionID",
+      "extractor_config": {
+        "regex_value": "AcsSessionID=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "AuthenticationIdentityStore",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 32,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "AuthenticationIdentityStore",
+      "extractor_config": {
+        "regex_value": "AuthenticationIdentityStore=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "AuthenticationMethod",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 33,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "AuthenticationMethod",
+      "extractor_config": {
+        "regex_value": "AuthenticationMethod=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "SelectedAccessService",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 34,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "SelectedAccessService",
+      "extractor_config": {
+        "regex_value": "SelectedAccessService=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "SelectedAuthorizationProfiles",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 16,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "SelectedAuthorizationProfiles",
+      "extractor_config": {
+        "regex_value": "SelectedAuthorizationProfiles=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "SelectedAuthenticationIdentityStores",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 36,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "SelectedAuthenticationIdentityStores",
+      "extractor_config": {
+        "regex_value": "SelectedAuthenticationIdentityStores=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Location",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 37,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "Location",
+      "extractor_config": {
+        "regex_value": "NetworkDeviceGroups=Location#All Locations#([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Device Types",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 40,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "DeviceTypes",
+      "extractor_config": {
+        "regex_value": "NetworkDeviceGroups=Device Type#All Device Types#([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "AuthorizationPolicyMatchedRule",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 38,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "AuthorizationPolicyMatchedRule",
+      "extractor_config": {
+        "regex_value": "AuthorizationPolicyMatchedRule=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "EapAuthentication",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 39,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "EapAuthentication",
+      "extractor_config": {
+        "regex_value": "EapAuthentication=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Serial Number",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 42,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "SerialNumber",
+      "extractor_config": {
+        "regex_value": "Serial Number=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Subject - Common Name",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 43,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "SubjectCommonName",
+      "extractor_config": {
+        "regex_value": "Subject - Common Name=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Subject Alternative Name",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 35,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "SubjectAlternativeName",
+      "extractor_config": {
+        "regex_value": "Subject Alternative Name=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "CPMSessionID",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 25,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "CPMSessionID",
+      "extractor_config": {
+        "regex_value": "CPMSessionID=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "EndPointMACAddress",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 24,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "EndPointMACAddress",
+      "extractor_config": {
+        "regex_value": "EndPointMACAddress=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "PostureAssessmentStatus",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 23,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "PostureAssessmentStatus",
+      "extractor_config": {
+        "regex_value": "PostureAssessmentStatus=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "EndPointMatchedProfile",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 22,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "EndPointMatchedProfile",
+      "extractor_config": {
+        "regex_value": "EndPointMatchedProfile=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "ISEPolicySetName",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 21,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "ISEPolicySetName",
+      "extractor_config": {
+        "regex_value": "ISEPolicySetName=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "AllowedProtocolMatchedRule",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 20,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "AllowedProtocolMatchedRule",
+      "extractor_config": {
+        "regex_value": "AllowedProtocolMatchedRule=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "IdentitySelectionMatchedRule",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 19,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "IdentitySelectionMatchedRule",
+      "extractor_config": {
+        "regex_value": "IdentitySelectionMatchedRule=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "AD-User-Resolved-Identities",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 3,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "ADUserResolvedIdentities",
+      "extractor_config": {
+        "regex_value": "AD-User-Resolved-Identities=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "AD-User-Candidate-Identities",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 0,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "ADUserCandidateIdentities",
+      "extractor_config": {
+        "regex_value": "AD-User-Candidate-Identities=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "AD-User-Join-Point",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 18,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "ADUserJoinPoint",
+      "extractor_config": {
+        "regex_value": "AD-User-Join-Point=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Days to Expiry",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 8,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "DaystoExpiry",
+      "extractor_config": {
+        "regex_value": "Days to Expiry=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Framed-IP-Address",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 12,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "FramedIPAddress",
+      "extractor_config": {
+        "regex_value": "Framed-IP-Address=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "NAS-Port-Type",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 6,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "NASPortType",
+      "extractor_config": {
+        "regex_value": "NAS-Port-Type=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "NAS-Port-Id=([^,]+),",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 15,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "NASPortId",
+      "extractor_config": {
+        "regex_value": "NAS-Port-Id=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "cisco-av-pair=method",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 14,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "ciscoavpairmethod",
+      "extractor_config": {
+        "regex_value": "cisco-av-pair=method=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "User-Name",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 66,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "UserName",
+      "extractor_config": {
+        "regex_value": "User-Name=([^,;]+)(,|;)"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Airespace-ACL-Name",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 1,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "AirespaceACLName",
+      "extractor_config": {
+        "regex_value": "Airespace-ACL-Name=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "IsEndpointInRejectMode",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 7,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "IsEndpointInRejectMode",
+      "extractor_config": {
+        "regex_value": "IsEndpointInRejectMode=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "FailureReason",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 10,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "FailureReason",
+      "extractor_config": {
+        "regex_value": "FailureReason=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "TotalFailedAttempts",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 17,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "TotalFailedAttempts",
+      "extractor_config": {
+        "regex_value": "TotalFailedAttempts=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "TotalFailedTime",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 11,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "TotalFailedTime",
+      "extractor_config": {
+        "regex_value": "TotalFailedTime=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Model Name",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 9,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "ModelName",
+      "extractor_config": {
+        "regex_value": "Model Name=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "Software Version",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 5,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "SoftwareVersion",
+      "extractor_config": {
+        "regex_value": "Software Version=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "UseCase",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 2,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "UseCase",
+      "extractor_config": {
+        "regex_value": "UseCase=([^,]+),"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "RadiusPacketType",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 13,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "RadiusPacketType",
+      "extractor_config": {
+        "regex_value": "RadiusPacketType=([^;]+);"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    },
+    {
+      "title": "AuthenticationResult",
+      "extractor_type": "regex",
+      "converters": [],
+      "order": 4,
+      "cursor_strategy": "copy",
+      "source_field": "message",
+      "target_field": "AuthenticationResult",
+      "extractor_config": {
+        "regex_value": "AuthenticationResult=([^;]+);"
+      },
+      "condition_type": "none",
+      "condition_value": ""
+    }
+  ],
+  "version": "2.1.0-SNAPSHOT"
+}
