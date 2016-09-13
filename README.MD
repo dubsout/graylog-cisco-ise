@@ -7,3 +7,7 @@ This extractor is limited to Logging Categories of Failed Attempts and Passed Au
 == Requirements ==
 
 Spawn UDP (or TCP) inputs on your desired port and import the extractors.
+
+== Caveats ==
+
+The Source Extractor will need to be updated to your companies standard. 
